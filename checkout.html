@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Sicairo's Juice Station</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="hero-section">
+        <nav class="main-nav">
+            <a class="nav-logo" href="index.html">Sicairo's Juice</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="#juice-menu">Menu</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <a href="faq.html">FAQ</a>
+                <a href="cart.html" class="cart-link">🛒 Cart <span id="cart-count" class="cart-badge">0</span></a>
+            </div>
+        </nav>
+        <h1>Checkout</h1>
+    </header>
+
+    <main class="menu-container">
+        <section style="max-width:700px; margin:0 auto;">
+            <form id="checkout-form">
+                <label>Name</label>
+                <input class="form-control" name="name" required>
+                <label>Email</label>
+                <input class="form-control" name="email" type="email" required>
+                <label>Address</label>
+                <textarea class="form-control" name="address" rows="3" required></textarea>
+                <div style="text-align:right; margin-top:10px;">
+                    <button class="add-to-cart-btn" type="submit">Place Order</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="socials">
+            <a href="#">Twitter</a> - <a href="#">Instagram</a> - <a href="#">Facebook</a>
+        </div>
+        <div style="margin-top:8px;">
+            <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Service</a>
+        </div>
+        <p style="margin-top:10px">&copy; 2025 Juice Blast Station. All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
