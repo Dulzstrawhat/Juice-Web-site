@@ -1,0 +1,302 @@
+/* ------------------------------------------- */
+/* 1. Global Styles and Typography */
+/* ------------------------------------------- */
+
+/* Use a bold, cartoony font for headings and a clean font for body text */
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Comfortaa:wght@400;700&display=swap');
+
+body {
+    font-family: 'Comfortaa', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* Very Light Blue/Sky Background */
+    color: #333333;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    font-family: 'Bungee Inline', cursive; /* Bold, unique font for titles */
+    color: #007bff; /* Vibrant Blue for Headings */
+    text-align: center;
+}
+
+/* ------------------------------------------- */
+/* 2. Header and Hero Section (The Banner) */
+/* ------------------------------------------- */
+
+.hero-section {
+    background: linear-gradient(90deg, #fffacd 0%, #e0ffff 100%); /* Soft Lemon to Mint gradient */
+    padding: 40px 20px;
+    border-bottom: 5px solid #007bff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.hero-section h1 {
+    font-size: 3.2em;
+    color: #1e90ff; /* Dodger Blue */
+    text-shadow: 3px 3px 0 #ffffff; 
+    margin-bottom: 5px;
+}
+
+.hero-tagline {
+    font-size: 1.2em;
+    text-align: center;
+    color: #0056b3;
+}
+
+/* Updated Delivery Info Box Styling */
+.delivery-info {
+    max-width: 650px;
+    margin: 30px auto 10px;
+    padding: 20px;
+    background-color: #e0ffff; /* Minty light-blue box */
+    border-radius: 12px;
+    border: 3px dashed #ff4500; /* Orange/Red dashed border */
+    font-family: 'Bungee Inline', cursive; /* Applied the cute/bold font here */
+}
+
+.delivery-info h2 {
+    font-size: 1.6em;
+    margin-top: 0;
+    color: #ff4500; /* Orange-Red for pop */
+}
+
+.delivery-info p {
+    font-family: 'Comfortaa', sans-serif; /* Keep body text readable */
+    font-size: 1.1em;
+    color: #104e8b;
+    font-weight: 700; /* Make text bolder */
+}
+
+/* ------------------------------------------- */
+/* 3. Menu Layout and Containers */
+/* ------------------------------------------- */
+
+.menu-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.menu-juices h2 {
+    border-bottom: 3px solid #3cb371; /* Medium Sea Green underline */
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+.menu-sides h2 {
+    border-bottom: 3px solid #ffa500; /* Orange underline */
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+#juice-menu, #side-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 24px;
+}
+
+/* ------------------------------------------- */
+/* 4. Individual Menu Item Styling */
+/* ------------------------------------------- */
+
+.menu-item {
+    background-color: #ffffff;
+    padding: 28px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid #3cb371; /* Mint Green border */
+    text-align: center;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.item-header {
+    display: flex;
+    flex-direction: column; /* Stack emoji and name for better alignment */
+    align-items: center;
+    margin-bottom: 12px;
+    min-height: 90px; /* allow taller names without overlapping description */
+}
+
+.item-emoji {
+    font-size: 3.6em; /* Larger emoji/icon */
+    line-height: 1;
+    margin-bottom: 6px;
+}
+
+.item-name {
+    font-size: 1.8em;
+    margin: 0;
+    color: #104e8b; /* Dark Blue */
+    font-family: 'Bungee Inline', cursive;
+}
+
+.item-description {
+    font-size: 0.95em;
+    color: #666666;
+    min-height: 48px;
+    margin-top: 6px;
+    margin-bottom: 12px;
+}
+
+/* Cart link and badge */
+.cart-link { position: relative; display: inline-flex; align-items: center; gap:8px; }
+.cart-badge {
+    display: inline-block;
+    min-width: 20px;
+    height: 20px;
+    padding: 0 6px;
+    border-radius: 999px;
+    background: #ff4500;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.8em;
+    line-height: 20px;
+    text-align: center;
+}
+
+/* Responsive adjustments so boxes stack nicely on small screens */
+@media (max-width: 600px) {
+    #juice-menu, #side-menu {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 14px;
+    }
+
+    .menu-item {
+        padding: 18px;
+    }
+
+    .item-emoji {
+        font-size: 2.6em;
+    }
+
+    .item-name {
+        font-size: 1.3em;
+    }
+}
+
+/* FIX: Ensure price is not too big and centered */
+.item-price {
+    font-size: 1.4em; /* Slightly reduced price size */
+    font-weight: 700;
+    color: #2e8b57; /* SeaGreen price tag */
+    margin: 5px 0 15px; /* Added spacing to fix overlap */
+}
+
+/* Navigation */
+.main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto 20px;
+    padding: 0 10px;
+}
+.main-nav .nav-logo {
+    font-family: 'Bungee Inline', cursive;
+    color: #1e90ff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+.main-nav .nav-links a {
+    margin-left: 14px;
+    text-decoration: none;
+    color: #104e8b;
+    font-weight: 700;
+}
+.hero-cta { text-align: center; margin-top: 15px; }
+.cta-btn { padding: 10px 18px; border-radius: 24px; }
+
+/* Use the provided image as the background behind the hero content on the homepage only.
+   Save the attachment into the project root as `hero-bg.jpg`. */
+/* If the hero image successfully loads, the script will add `hero-image` to the body
+   and these rules will apply: */
+.home.hero-image .hero-section {
+    background-image: url('hero-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative; /* enable ::before as overlay */
+    overflow: hidden;
+}
+
+.home.hero-image .hero-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.22); /* subtle overlay when image present */
+    z-index: 0;
+}
+
+.home.hero-image .hero-section > * {
+    position: relative;
+    z-index: 1;
+}
+
+/* Footer social links */
+.footer .socials a {
+    color: #e0ffff;
+    margin: 0 8px;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Cart page styles */
+.cart-row { display: grid; grid-template-columns: 40px 1fr 100px 100px 80px; gap: 8px; align-items: center; padding: 10px 0; border-bottom: 1px solid #eee; }
+.cart-emoji { font-size: 1.6em; }
+.cart-qty-input { width: 60px; }
+.cart-actions { text-align: right; }
+
+/* Forms */
+.form-control { display: block; width: 100%; padding: 8px; margin-bottom: 10px; border-radius: 6px; border: 1px solid #ccc; }
+
+@media (max-width: 600px) {
+    .cart-row { grid-template-columns: 30px 1fr 70px; grid-auto-rows: auto; }
+    .cart-price, .remove-from-cart { display: none; }
+}
+
+/* ------------------------------------------- */
+/* 5. Buttons & Footer (Same as before) */
+/* ------------------------------------------- */
+
+.add-to-cart-btn {
+    background-color: #ffa500; /* Orange button */
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: background-color 0.3s;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 160px; /* fixed width for symmetry */
+    min-width: 120px;
+}
+
+.add-to-cart-btn:hover {
+    background-color: #ffb74d;
+}
+
+@media (max-width: 600px) {
+    .add-to-cart-btn {
+        width: auto; /* allow buttons to shrink on small screens */
+        padding: 10px 14px;
+    }
+}
+
+.footer {
+    background-color: #104e8b; /* Dark blue footer */
+    color: #e0ffff;
+    text-align: center;
+    padding: 15px 0;
+    font-size: 0.8em;
+    margin-top: 40px;
+}
